@@ -21,7 +21,8 @@ function readTextFile(file)
     }
     rawFile.send(null);
 }
-readTextFile("data.txt")
+//readTextFile("data.txt")
+readTextFile("top_five_till_14L.txt")
 
 var allText1
 var names_to_id = [];
@@ -239,5 +240,6 @@ function getRecom() {
   });
 }
 
-autocomplete(document.getElementById("myInput"), names, "name.txt", readTextFile1);
+//autocomplete(document.getElementById("myInput"), names, "name.txt", readTextFile1);
+autocomplete(document.getElementById("myInput"), names, "filtered_id_title.txt", readTextFile1);
 
