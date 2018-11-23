@@ -87,7 +87,7 @@ function getRecom() {
         var str = "<h3><b>" +x.replace(/_/g, " ")+ "</b></h3>";
         str += obj.extract;
         $("#input").hovercard({
-            detailsHTML: obj.extract,
+            detailsHTML: str,
             width: 400,
             cardImgSrc: img,
             //openOnLeft: true,
@@ -99,7 +99,7 @@ function getRecom() {
         var res2 = "";
         for(i=0;i<result.length;i++){
             //res2 += "<p><a href=\"https://en.wikipedia.org/wiki/"+result[i]+"\""+">"+result[i].replace(/_/g, " ")+"</a></p>";
-            res2 += "<div id=\"hover-element-"+i+"\"><p><g href=\"https://en.wikipedia.org/wiki/"+result[i]+"\""+">"+result[i].replace(/_/g, " ")+"</g></p></div>";
+            res2 += "<div id=\"hover-element-"+i+"\"><p><a href=\"https://en.wikipedia.org/wiki/"+result[i]+"\""+">"+result[i].replace(/_/g, " ")+"</a></p></div>";
         }
     	document.getElementById("results").innerHTML = res2;
         document.getElementById("articleRecom").innerHTML = "Recommended Articles";
